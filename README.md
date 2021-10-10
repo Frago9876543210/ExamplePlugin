@@ -25,4 +25,5 @@ COMPOSER=phpstan-composer.json composer update
 
 In a nutshell, just stick `COMPOSER=phpstan-composer.json` in front of any Composer command. Alternatively you can export the `COMPOSER` environment variable, but beware if you use the same shell for a different project later on.
 
-
+### GitHub Actions
+You can find a workflow suitable for analysing most plugins using this system in [`.github/workflows/main.yml`](/.github/workflows/main.yml).
