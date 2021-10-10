@@ -46,6 +46,9 @@ class ExampleListener implements Listener{
 	}
 
 	/**
+	 * This runs after all other priorities. We mustn't cancel the event at MONITOR priority, we can only observe the
+	 * result.
+	 *
 	 * @priority MONITOR
 	 */
 	public function handlerNamesCanBeAnything(PlayerChatEvent $event) : void{
