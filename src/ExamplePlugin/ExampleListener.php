@@ -24,6 +24,7 @@ declare(strict_types=1);
 namespace ExamplePlugin;
 
 use pocketmine\event\Listener;
+use pocketmine\event\player\PlayerChatEvent;
 use pocketmine\event\player\PlayerRespawnEvent;
 
 class ExampleListener implements Listener{
@@ -42,5 +43,16 @@ class ExampleListener implements Listener{
 	 */
 	public function onRespawn(PlayerRespawnEvent $event) : void{
 		$this->plugin->getServer()->broadcastMessage($event->getPlayer()->getDisplayName() . " has just respawned!");
+	}
+
+	/**
+	 * @priority MONITOR
+	 */
+	public function handlerNamesCanBeAnything(PlayerChatEvent $event) : void{
+		if(!$event->isCancelled()){
+			$this->plugin->getLogger()->info("Player " . $event->getPlayer()->getName() . " sent a message: " . $event->getMessage());
+		}else{
+			$this->plugin->getLogger()->info("Player " . $event->getPlayer()->getName() . " tried to send a message, but it was cancelled: " . $event->getMessage());
+		}
 	}
 }
