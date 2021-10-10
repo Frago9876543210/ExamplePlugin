@@ -39,7 +39,6 @@ class ExampleListener implements Listener{
 	 * @param PlayerRespawnEvent $event
 	 *
 	 * @priority        NORMAL
-	 * @ignoreCancelled false
 	 */
 	public function onSpawn(PlayerRespawnEvent $event) : void{
 		$this->plugin->getServer()->broadcastMessage($event->getPlayer()->getDisplayName() . " has just spawned!");
