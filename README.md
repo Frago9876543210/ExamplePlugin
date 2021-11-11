@@ -24,3 +24,5 @@ vendor/bin/phpstan analyze
 composer update
 ```
 
+### GitHub Actions
+You can find a workflow suitable for analysing most plugins using this system in [`.github/workflows/main.yml`](/.github/workflows/main.yml).
