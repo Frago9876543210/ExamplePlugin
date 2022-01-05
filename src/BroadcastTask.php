@@ -9,12 +9,7 @@ use pocketmine\Server;
 
 class BroadcastTask extends Task{
 
-	/** @var Server */
-	private $server;
-
-	public function __construct(Server $server){
-		$this->server = $server;
-	}
+	public function __construct(private Server $server){ }
 
 	public function onRun() : void{
 		$this->server->broadcastMessage("[ExamplePlugin] I've run on tick " . $this->server->getTick());
