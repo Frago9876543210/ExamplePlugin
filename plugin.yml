@@ -2,8 +2,8 @@
 name: ExamplePlugin
 main: ExamplePlugin\MainClass
 src-namespace-prefix: ExamplePlugin
-version: 1.2.0
-api: 4.0.0
+version: 1.3.0
+api: 4.21.0
 
 load: POSTWORLD
 author: PocketMine Team
