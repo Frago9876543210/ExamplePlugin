@@ -2,7 +2,7 @@
 name: ExamplePlugin
 main: ExamplePlugin\MainClass
 src-namespace-prefix: ExamplePlugin
-version: 1.4.0
+version: 1.4.1+dev
 api: 5.0.0
 
 load: POSTWORLD
